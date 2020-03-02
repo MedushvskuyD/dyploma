@@ -2,13 +2,279 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
   color: #000;
 }
 
 ul {
+  padding: 0;
+  margin: 0;
   list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  min-height: 120px;
+  background-color: #f7f7f7;
+  box-shadow: inset 0 5px 15px -10px rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+
+  &__inner {
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    min-width: 180px;
+    width: 180px;
+    height: 50px;
+    background-image: url(../images/logo.png);
+    background-size: contain;
+  }
+
+  &__nav {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #151515;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        color: #db2a19;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+
+    &-item {
+      // overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #000;
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+
+      &::before {
+        font-size: 20px;
+        font-family: "icomoon", sans-serif;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s ease-in-out;
+      }
+
+      &:hover::before {
+        color: #db2a19;
+      }
+    }
+
+    &-phone::before {
+      content: "\f095";
+    }
+
+    &-email::before {
+      content: "\f003";
+    }
+
+    &-address::before {
+      content: "\f041";
+    }
+  }
+}
+
+.slider {
+  position: relative;
+  background-color: #f7f7f7;
+
+  &__inner {
+    max-width: 1400px;
+  }
+
+  &__item {
+    min-height: 600px;
+
+    &1 {
+      background-image: url(../images/slide1.jpg);
+    }
+
+    &2 {
+      background-image: url(../images/slide2.jpg);
+    }
+
+    &3 {
+      background-image: url(../images/slide3.jpg);
+    }
+  }
+
+  &__title-box {
+    background-color: rgba(247, 247, 247, 0.85);
+    max-width: 450px;
+    min-height: 600px;
+    padding: 80px 50px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.67;
+    font-weight: 400;
+    letter-spacing: 0.07em;
+    margin-bottom: 35px;
+  }
+
+  &__title {
+    font-size: 48px;
+    letter-spacing: 0.07em;
+    margin-bottom: 60px;
+  }
+
+  &__btn {
+    cursor: pointer;
+    background-color: #031e2b;
+    // min-height: 85px;
+    max-width: 265px;
+    padding-left: 60px;
+    text-transform: uppercase;
+    color: #e3e6e8;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 1.85;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #db2a19;
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 85px;
+    background-color: rgba(255, 255, 255, 0.06);
+
+    &::before {
+      content: "\f105";
+      font-size: 28px;
+      font-family: "icomoon", sans-serif;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  &__number {
+    font-family: "Roboto", sans-serif;
+    float: right;
+    width: 300px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
+    transform: translateY(-75px);
+    padding: 15px 0 0 30px;
+
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0;
+    color: #db2a19;
+  }
+
+  &__num {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1;
+    color: rgba(21, 21, 21, 0.21);
+  }
+}
+
+.slick {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  transform: translateY(-120%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #989898;
+  background-color: transparent;
+  outline: none;
+  transition: 0.3s;
+
+  &::before {
+    position: absolute;
+    content: "\ea40";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "icomoon", serif;
+    color: #151515;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    border-color: #db2a19;
+
+    &::before {
+      color: #db2a19;
+    }
+  }
+
+  &-prev {
+    right: 90px;
+  }
+
+  &-next {
+    right: 25px;
+
+    &::before {
+      content: "\ea3c";
+    }
+  }
+}
+
+.services__img {
+  width: 150px;
+  height: 150px;
 }
