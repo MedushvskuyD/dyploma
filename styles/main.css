@@ -1,0 +1,243 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto; }
+
+.header {
+  min-height: 120px;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: inset 0 5px 15px -10px rgba(0, 0, 0, 0.75);
+          box-shadow: inset 0 5px 15px -10px rgba(0, 0, 0, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .header__inner {
+    background-color: #f7f7f7;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .header__logo {
+    min-width: 180px;
+    width: 180px;
+    height: 50px;
+    background-image: url(../images/logo.png);
+    background-size: contain; }
+  .header__nav {
+    max-width: 700px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .header__nav a {
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #151515;
+      -webkit-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out; }
+      .header__nav a:hover {
+        color: #db2a19; }
+  .header__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .header__contacts-item {
+      position: relative;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #000; }
+      .header__contacts-item:not(:first-child) {
+        margin-left: 10px; }
+      .header__contacts-item::before {
+        font-size: 20px;
+        font-family: "icomoon", sans-serif;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out; }
+      .header__contacts-item:hover::before {
+        color: #db2a19; }
+    .header__contacts-phone::before {
+      content: "\f095"; }
+    .header__contacts-email::before {
+      content: "\f003"; }
+    .header__contacts-address::before {
+      content: "\f041"; }
+
+.slider {
+  position: relative;
+  background-color: #f7f7f7; }
+  .slider__inner {
+    max-width: 1400px; }
+  .slider__item {
+    min-height: 600px; }
+    .slider__item1 {
+      background-image: url(../images/slide1.jpg); }
+    .slider__item2 {
+      background-image: url(../images/slide2.jpg); }
+    .slider__item3 {
+      background-image: url(../images/slide3.jpg); }
+  .slider__title-box {
+    background-color: rgba(247, 247, 247, 0.85);
+    max-width: 450px;
+    min-height: 600px;
+    padding: 80px 50px; }
+  .slider__text {
+    font-size: 18px;
+    line-height: 1.67;
+    font-weight: 400;
+    letter-spacing: 0.07em;
+    margin-bottom: 35px; }
+  .slider__title {
+    font-size: 48px;
+    letter-spacing: 0.07em;
+    margin-bottom: 60px; }
+  .slider__btn {
+    cursor: pointer;
+    background-color: #031e2b;
+    max-width: 265px;
+    padding-left: 60px;
+    text-transform: uppercase;
+    color: #e3e6e8;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 1.85;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .slider__btn:hover {
+      background-color: #db2a19; }
+  .slider__arrow {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 85px;
+    background-color: rgba(255, 255, 255, 0.06); }
+    .slider__arrow::before {
+      content: "\f105";
+      font-size: 28px;
+      font-family: "icomoon", sans-serif;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      -webkit-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out; }
+  .slider__number {
+    font-family: "Roboto", sans-serif;
+    float: right;
+    width: 300px;
+    height: 75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #f7f7f7;
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+    padding: 15px 0 0 30px;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0;
+    color: #db2a19; }
+  .slider__num {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1;
+    color: rgba(21, 21, 21, 0.21); }
+
+.slick {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #989898;
+  background-color: transparent;
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+  .slick::before {
+    position: absolute;
+    content: "\ea40";
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-family: "icomoon", serif;
+    color: #151515;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+  .slick:hover {
+    border-color: #db2a19; }
+    .slick:hover::before {
+      color: #db2a19; }
+  .slick-prev {
+    right: 90px; }
+  .slick-next {
+    right: 25px; }
+    .slick-next::before {
+      content: "\ea3c"; }
+
+.services__img {
+  width: 150px;
+  height: 150px; }
+
+/*# sourceMappingURL=main.css.map */
